@@ -1,19 +1,15 @@
-#!/usr/bin/python3
-"""This script will unlock the list of lists."""
-"""Module that determines if all the boxes can be opened."""
+sizes = len(boxes)  # The sizes of the list of boxes.
+    box = {}  # The dictionary that will contain the boxes to  be opened.
+    a = 0  #  the box that will be checked.
 
 
-def canUnlockAll(boxes):
-    """function takes a list of lists and the content
-       of a list unlocks other lists.
-    """
-
-    keys = [0]
+for keys in boxes:  # for each of the boxes in the list of boxes.
+    if len(keys) == 0 or a == 0:
+        box[a] = -1
     for key in keys:
-        for keyBox in boxes[key]:#for each box in the list of boxes.
-            if keyBox not in keys and keyBox < len(boxes):
-                keys.append(keyBox)
-    if len(keys) == len(boxes):
-        return True # all the boxes can be opened.
-    return False
-
+        if key < sizes and key != a:
+            box[key] = key  # add box to dictionary.
+    if len(box) == sizes:
+        return True  # all the boxes can now  be opened.
+    a += 1
+return False
