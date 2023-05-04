@@ -1,2 +1,0 @@
-# Pascal Triangle
-## Alx-interview
