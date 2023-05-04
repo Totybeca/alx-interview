@@ -1,26 +1,28 @@
 #!/usr/bin/python3
+
 """
-Minimum Operations
+    This method determines the number of minmum operations given n characters
 """
 
 
 def minOperations(n):
     """
-    In a text file, there is a single character H.
-    Your text editor can execute only two operations in this file:
-    Copy All and Paste. Given a number n, write a method that calculates
-    the fewest number of operations needed to result in exactly n H characters
-    in the file
+        The function that calculates the fewest number of operations
+        needed to give a result of exactly n H characters in a file
+        args: n: The number of characters to be displayed
+        return: The number of min operations
     """
 
-    if n <= 1:
-        return 0
-    num, div, numOfOperations = n, 2, 0
-
-    while num > 1:
-        if num % div == 0:
-            num = num / div
-            numOfOperations = numOfOperations + div
+    begin = 1
+    num = 0
+    count = 0
+    while begin < n:
+        remainder = n - begin
+        if (remainder % begin == 0):
+            num = begin
+            begin += num
+            count += 2
         else:
-            div += 1
-    return numOfOperations
+            begin += num
+            count += 1
+    return count
