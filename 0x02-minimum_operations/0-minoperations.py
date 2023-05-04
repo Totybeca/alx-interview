@@ -3,15 +3,17 @@
 Minimum Operations
 """
 
-def minOperations(n):
 
+def minOperations(n):
+   
     if n <= 1:
         return 0
-    number, division, number-Of_Operations = n, 2, 0
-    while number > 1:
-        if number % division == 0:
-            number = number / division
-            num-Of_Operations = num-Of_Operations + division
+    num, div, numOfOperations = n, 2, 0
+
+    while num > 1:
+        if num % div == 0:
+            num = num / div
+            numOfOperations = numOfOperations + div
         else:
-            division += 1
-    return number-Of_Operations
+            div += 1
+    return numOfOperations
