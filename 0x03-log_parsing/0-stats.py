@@ -43,3 +43,4 @@ try:
 except KeyboardInterrupt:
     printsts(sts, size)
     raise
+
