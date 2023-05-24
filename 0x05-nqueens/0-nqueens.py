@@ -41,3 +41,5 @@ if __name__ == "__main__":
         return True
 
     solve_queens(0, n, solution)
+    
+    
