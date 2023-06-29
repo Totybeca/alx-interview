@@ -53,4 +53,3 @@ def isWinner(x, nums):
     if player1 * 2 > len(nums):  # if Maria wins more than half the rounds
         return "Maria"  # Maria wins
     return "Ben"  # Ben wins
-
